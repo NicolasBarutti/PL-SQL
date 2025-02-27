@@ -8,16 +8,16 @@ DECLARE
     v_valor_com_juros NUMBER(20,2); 
     v_parcela NUMBER(20,2);      
 BEGIN
-    -- Solicitar o valor da compra em tempo de execução
+    
     v_valor_compra := &valor_compra;
 
-    -- Calcular o valor financiado (não considerando entrada)
+    
     v_valor_financiado := v_valor_compra;
 
-    -- Calcular o valor total com juros
+   
     v_valor_com_juros := v_valor_financiado + (v_valor_financiado * v_juros);
 
-    -- Calcular o valor da parcela
+   
     v_parcela := v_valor_com_juros / v_parcelas;
     dbms_output.put_line('Valor da compra: R$ ' || v_valor_compra);
     dbms_output.put_line('Valor financiado: R$ ' || v_valor_financiado);
